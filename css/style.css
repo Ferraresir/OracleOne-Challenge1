@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --dark-blue: #0a3871;
+  --light-blue: #f3f5fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+header {
+  margin: 2rem 0 0 4rem;
+}
+
+.input {
+  flex-grow: 1;
+  display: flex;
+}
+
+.input textarea {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 60%;
+  margin: 5rem auto;
+  resize: none;
+  flex-grow: 1;
+  border: none;
+  background: var(--light-blue);
+  box-shadow: none;
+  outline: none;
+}
+
+.interface {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.interface span {
+  background: url("../assets/simbol.png");
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: auto;
+}
+
+.note {
+  margin-right: 9rem;
+}
+
+.buttons {
+  margin: 2rem auto;
+}
+
+.btn-cod {
+  width: 15rem;
+  height: 3rem;
+  background: var(--dark-blue);
+  color: var(--light-blue);
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.btn-dec {
+  width: 15rem;
+  height: 3rem;
+  background: #CED4DA;
+  color: var(--dark-blue);
+  border-radius: 1rem;
+  outline: 1px solid var(--dark-blue);
+  margin-left: 1rem;
+}
+
+.output {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  height: 85%;
+  background: white;
+  border-radius: 1rem;
+}
+
+.no-msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  text-align: center;
+  gap: 2rem;
+}
+
+.no-msg img{
+
+width: 80%;
+}
+
+.text-output {
+  height: 90%;
+  background: none;
+  border: none;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  margin: 1rem auto 0 auto;
+  border-radius: 0.6rem;
+  border: none;
+  display: none;
+}
+
+.post-msg{
+  display:none
+}
