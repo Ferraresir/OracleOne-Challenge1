@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <main class="wrapper">
-      <header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main class="wrapper">
+
+
+    <div class="logo">
+      <a href="https://www.aluracursos.com" target="_blank">
         <img src="./assets/Vector.png" alt="logo de alura" />
-      </header>
+      </a>
+    </div>
 
-      <div class="input">
-        <textarea name="" id="input-text" cols="30" rows="10" autofocus>
-          Ingrese el texto aqui
+
+    <div class="input">
+      <textarea name="" id="input-text" rows="10" cols="35" placeholder="Ingrese el texto aqui..." autofocus>
         </textarea>
-      </div>
       <div class="interface">
         <div class="note">
-          <span></span>
-          <small>Solo acepta letras minusculas y sin acentuar</small>
         </div>
+        <span>
+          <img src="./assets/simbol.png" alt="">
+        </span>
+        <small>Solo acepta letras minusculas y sin acentuar</small>
         <div class="buttons">
-          <button class="btn-cod">Encriptar</button>
-          <button class="btn-dec">Desencriptar</button>
+          <button id="btn-enc">Encriptar</button>
+          <button id="btn-dec">Desencriptar</button>
         </div>
       </div>
-    </main>
+    </div>
 
-    <aside class="output box">
+
+    <div class="output">
       <div class="no-msg">
         <img src="./assets/Muñeco.png" alt="" />
         <h3>Ningun mensaje fue encontrado</h3>
         <p>Ingrese el texto que desees encriptar o deseencriptar.</p>
       </div>
       <div class="post-msg">
-        <input class="text-output" type="text" id="msg" disabled />
-        <input class="btn" type="submit" value="copiar" id="btn-copy" />
+        <textarea class="text-output" type="text" id="msg" disabled>
+        </textarea>
+        <button class="btn" type="submit" value="copiar" id="btn-copy">Copiar</button>
       </div>
-    </aside>
-  </body>
+    </div>
+  </main>
 
-  <script src="./js/script.js"></script>
+</body>
+
+<script src="./js/script.js"></script>
+
 </html>

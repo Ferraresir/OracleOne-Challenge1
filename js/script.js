@@ -1,19 +1,26 @@
-var text = document.querySelector("#input-text");
-var result = document.querySelector("#msg");
-var copybtn = document.querySelector("#btn-copy");
-var btnencrypt = document.querySelector(".btn-cod");
-var btndecrypt = document.querySelector(".btn-dec");
-var msj = document.querySelector("#input-text").value;
+const result = document.querySelector("#msg");
+const copybtn = document.querySelector("#btn-copy");
+const btndecrypt = document.querySelector("#btn-dec");
+const btnencrypt = document.querySelector("#btn-enc");
+const msj = document.querySelector("#input-text").value;
+const noMsg = document.querySelector(".no-msg");
+const postMsg = document.querySelector(".post-msg");
 
-btndecrypt.addEventListener("click", function () {
-  var msj = document.querySelector("#input-text").value;
-  console.log(desencriptar(msj));
-});
+function switchdisplay(){
+  noMsg.style.display = "none";
+  postMsg.style.display = "flex";
+}
 
 btnencrypt.addEventListener("click", function () {
-  var msj = document.querySelector("#input-text").value;
+  let msj = document.querySelector("#input-text").value;
   result.value = encriptar(msj);
-  console.log(encriptar(msj));
+  switchdisplay()
+});
+
+btndecrypt.addEventListener("click", function () {
+  let msj = document.querySelector("#input-text").value;
+  result.value = desencriptar(msj);
+  switchdisplay()
 });
 
 copybtn.addEventListener("click", function () {
@@ -21,22 +28,22 @@ copybtn.addEventListener("click", function () {
 });
 
 function encriptar(msj) {
-  var encripted = msj
-    .replace("e", "enter")
-    .replace("i", "imes")
-    .replace("a", "ai")
-    .replace("o", "ober")
-    .replace("u", "ufar");
+  let encripted = msj
+    .replaceAll("e", "enter")
+    .replaceAll("i", "imes")
+    .replaceAll("a", "ai")
+    .replaceAll("o", "ober")
+    .replaceAll("u", "ufar");
   return encripted;
 }
 
 function desencriptar(msj) {
-  var decripted = msj
-    .replace("enter", "e")
-    .replace("imes", "i")
-    .replace("ai", "a")
-    .replace("ober", "o")
-    .replace("ufar", "u");
+  let decripted = msj
+    .replaceAll("enter", "e")
+    .replaceAll("imes", "i")
+    .replaceAll("ai", "a")
+    .replaceAll("ober", "o")
+    .replaceAll("ufar", "u");
   return decripted;
 }
 
