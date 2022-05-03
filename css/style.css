@@ -13,35 +13,36 @@
   color: var(--dark-blue);
 }
 
-body{
+body {
   background-color: var(--light-blue);
   color: var(--dark-blue);
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 100vw;
   height: 100vh;
-  flex-wrap: wrap;                              
   padding: 2rem 2rem;
 }
 
-
-.logo{
-  width: 4rem;
+.logo {
+  width: 4vw;
   text-align: center;
   height: auto;
   margin-right: auto;
 }
 
-.input{
+.input {
   display: flex;
   flex-direction: column;
+  margin: 3rem auto;
+  width: 50vw;
 }
 
-#input-text{
+#input-text {
   margin-top: 3rem;
   background: none;
   height: 100%;
@@ -52,16 +53,17 @@ body{
   font-size: 1.5rem;
 }
 
-.buttons{
+.buttons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin-top: 1rem;
 }
 
-#btn-enc{
-  width: 50%;
+#btn-enc {
+  width: 45%;
   height: 3rem;
   border-radius: 15px;
   border: none;
@@ -69,54 +71,112 @@ body{
   background-color: var(--dark-blue);
 }
 
-#btn-dec{
-  width: 50%;
+#btn-enc:active {
+  background: none;
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+#btn-dec {
+  width: 45%;
   height: 3rem;
   border-radius: 15px;
   border: 1px solid var(--dark-blue);
   box-shadow: none;
+  background: none;
 }
 
-.output{
+#btn-dec:active {
+  background: var(--dark-blue);
+  color: var(--light-blue);
+}
+
+.output {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-left: auto;
-  width: 22%;
+  width: 20vw;
   box-shadow: 5px 5px 20px black;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0 1rem;
-  color: white;
-} 
-
-.output img{
-  width: 100%;
+  background-color: white;
 }
 
-.post-msg{
+.output img {
+  width: 80%;
+
+}
+
+.post-msg {
   display: none;
   flex-direction: column;
-  padding: 1rem 0.7rem;
+  padding: 1.5rem 1rem;
   width: 100%;
   height: 100%;
 }
 
-#msg{
-  height: 90%; 
+#msg {
+  height: 90%;
   resize: none;
   border: none;
 }
 
-#btn-copy{
+#btn-copy {
+  background: none;
   width: 100%;
   height: 3rem;
   border-radius: 15px;
   margin: 0 auto;
   margin-top: 1rem;
-  border: none;
+  border: 1px solid var(--dark-blue);
+}
+
+#btn-copy:active {
   background-color: var(--dark-blue);
   color: white;
 }
-     
+
+@media screen and (max-width: 810px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .input {
+    width: 100%;
+    height: 60%;
+  }
+
+  .output {
+    width: 100%;
+    height: 18%;
+  }
+
+  .output img {
+    display: none;
+  }
+
+  .post-msg {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .buttons {
+    gap: 1rem;
+  }
+
+  #btn-enc {
+    width: 90%;
+  }
+
+  #btn-dec {
+    width: 90%;
+  }
+}
