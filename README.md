@@ -3,8 +3,7 @@
 Codificador/Decodificador de mensajes
 
 Primer challenge  propuesto por el proyecto Oracle Next Education.
-
-============
+======================
 Codificacion
 
 | Key           | Value                                                                |
@@ -15,5 +14,5 @@ Codificacion
 | o |ober|
 | u |ufat|
 
-=================
+======================
 Puedes ver la aplicacion en: https://ferraresir.github.io/OracleOne-Challenge1/
