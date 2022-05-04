@@ -15,5 +15,20 @@ i 	imes
 o 	ober
 u 	ufat
 
+Acerca del proyecto
+======================
+Codificador/Decodificador de mensajes
 
-This is the design made in Figma that we received to build on or otherwise we could make a customized one.
+Primer challenge  propuesto por el proyecto Oracle Next Education.
+
+Codificacion
+============
+Key 	Value
+a 	ai
+e 	enter
+i 	imes
+o 	ober
+u 	ufat
+
+=================
+Puedes ver la aplicacion en: https://ferraresir.github.io/OracleOne-Challenge1/
