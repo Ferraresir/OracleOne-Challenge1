@@ -1,33 +1,57 @@
-const result = document.querySelector("#msg");
+//botones
 const copybtn = document.querySelector("#btn-copy");
 const btndecrypt = document.querySelector("#btn-dec");
 const btnencrypt = document.querySelector("#btn-enc");
-const msj = document.querySelector("#input-text")
+const clearmsj = document.querySelector("#clear");
+
+//textareas
+const result = document.querySelector("#msg");
+const msj = document.querySelector("#input-text");
+
+//output
 const noMsg = document.querySelector(".no-msg");
 const postMsg = document.querySelector(".post-msg");
 
-function switchdisplay(){
+//switch display function
+function switchdisplay() {
   noMsg.style.display = "none";
   postMsg.style.display = "flex";
 }
 
+
+//eventlisteners
+
 btnencrypt.addEventListener("click", function () {
-  let payload = msj.value.toLowerCase()
-  result.value = encriptar(payload);
-  switchdisplay()
-  msj.value = ""
+  let payload = msj.value.toLowerCase();
+  if (payload.length >= 1) {
+    result.value = encriptar(payload);
+    switchdisplay();
+  } else {
+    alert("Escriba un mensaje primero");
+  }
 });
 
 btndecrypt.addEventListener("click", function () {
-  let payload = msj.value.toLowerCase()
-  result.value = desencriptar(payload);
-  switchdisplay()
-  msj.value=""
+  let payload = msj.value.toLowerCase();
+  if (payload.length >= 1) {
+    result.value = desencriptar(payload);
+    switchdisplay();
+  } else {
+    alert("Escriba un mensaje primero");
+  }
 });
 
 copybtn.addEventListener("click", function () {
   navigator.clipboard.writeText(result.value);
 });
+
+clearmsj.addEventListener("click", function () {
+  msj.value = "";
+  noMsg.style.display = "block";
+  postMsg.style.display = "none";
+});
+
+//funciones de encriptar
 
 function encriptar(msj) {
   let encripted = msj

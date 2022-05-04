@@ -18,6 +18,10 @@ body {
   color: var(--dark-blue);
 }
 
+button{
+  cursor: pointer;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -26,7 +30,6 @@ body {
   max-width: 100vw;
   height: 100vh;
   padding: 2rem 2rem;
-
 }
 
 .logo {
@@ -52,6 +55,19 @@ body {
   resize: none;
   outline: none;
   font-size: 1.5rem;
+}
+
+#clear {
+  border: none;
+  margin-left: auto;
+  padding: 0.5rem;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#clear:hover{
+  text-shadow: 1px 1px 20px black;
 }
 
 .buttons {
@@ -108,7 +124,6 @@ body {
 
 .output img {
   width: 80%;
-
 }
 
 .post-msg {
