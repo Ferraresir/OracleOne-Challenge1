@@ -8,7 +8,6 @@ Codificacion
 ============
 
 Key |	Value
------------
  a 	| ai
  e 	| enter
  i 	| imes
