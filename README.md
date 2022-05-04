@@ -5,7 +5,6 @@ Primer challenge  propuesto por el proyecto Oracle Next Education.
 
 
 ### Codificacion
-======================
 
 | Key           | Value                                                                |
 | ----------------- | ------------------------------------------------------------------ |
@@ -15,5 +14,5 @@ Primer challenge  propuesto por el proyecto Oracle Next Education.
 | o |ober|
 | u |ufat|
 
-======================
-Puedes ver la aplicacion en: https://ferraresir.github.io/OracleOne-Challenge1/
+
+Puedes ver la aplicacion funcionando en: https://ferraresir.github.io/OracleOne-Challenge1/
