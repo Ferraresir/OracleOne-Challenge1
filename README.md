@@ -5,7 +5,7 @@ Codificador/Decodificador de mensajes
 Primer challenge  propuesto por el proyecto Oracle Next Education.
 
 ============
-##Codificacion
+Codificacion
 
 | Key           | Value                                                                |
 | ----------------- | ------------------------------------------------------------------ |
