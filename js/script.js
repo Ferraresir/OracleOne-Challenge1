@@ -2,7 +2,7 @@ const result = document.querySelector("#msg");
 const copybtn = document.querySelector("#btn-copy");
 const btndecrypt = document.querySelector("#btn-dec");
 const btnencrypt = document.querySelector("#btn-enc");
-const msj = document.querySelector("#input-text").value;
+const msj = document.querySelector("#input-text")
 const noMsg = document.querySelector(".no-msg");
 const postMsg = document.querySelector(".post-msg");
 
@@ -12,15 +12,17 @@ function switchdisplay(){
 }
 
 btnencrypt.addEventListener("click", function () {
-  let msj = document.querySelector("#input-text").value;
-  result.value = encriptar(msj);
+  let payload = msj.value.toLowerCase()
+  result.value = encriptar(payload);
   switchdisplay()
+  msj.value = ""
 });
 
 btndecrypt.addEventListener("click", function () {
-  let msj = document.querySelector("#input-text").value;
-  result.value = desencriptar(msj);
+  let payload = msj.value.toLowerCase()
+  result.value = desencriptar(payload);
   switchdisplay()
+  msj.value=""
 });
 
 copybtn.addEventListener("click", function () {
